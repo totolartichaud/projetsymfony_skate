@@ -1,0 +1,7 @@
+easy_admin:
+  entities:
+    - App\Entity\User
+    - App\Entity\Player
+    - App\Entity\Sport
+    - App\Entity\Team
+

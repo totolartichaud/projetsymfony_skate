@@ -1,0 +1,46 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+{% trans_default_domain 'FOSUserBundle' %}
+
+<h2 class="text-center mt-5">REGISTER</h2>
+
+{{ form_start(
+    form,
+    {
+        'method': 'post',
+        'action': path('fos_user_registration_register'),
+        'attr': {'class': 'fos_user_registration_register mt-5'}
+    })
+}}
+<div class="form-group">
+    <div class="row mb-4">
+        <div class="col-md-12 col-sm-12">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 col-sm-12">
+            {{ form_label(form.username) }}
+            {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-6 col-sm-12">
+            {{ form_label(form.plainPassword.first) }}
+            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-md-6 col-sm-12">
+            {{ form_label(form.plainPassword.second) }}
+            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+</div>
+
+{{ form_end(form) }}

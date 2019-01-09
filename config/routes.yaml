@@ -1,0 +1,22 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+home:
+    path: /
+    controller: App\Controller\HomeController::home
+
+home_name:
+    path: /name/{name}
+    controller: App\Controller\HomeController::homeName
+
+players:
+    path: /players
+    controller: App\Controller\PlayerController::getPlayers
+
+add_player:
+    path: /players/add
+    controller: App\Controller\PlayerController::createPlayer
+
+
+
